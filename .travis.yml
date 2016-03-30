@@ -10,7 +10,7 @@ before_install:
 script:
  - python bootstrap.py
  - bin/buildout
- - bin/test --with-tap
+ - bin/test --with-xunit
 
 after_script:
-  - hiptest-publisher -c python-unittest.conf --push="*.tap" --test-run-id=1357
+  - hiptest-publisher -c python-unittest.conf --push="nosetests.xml" --test-run-id=1357
