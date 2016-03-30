@@ -13,4 +13,4 @@ script:
  - bin/test --with-tap
 
 after_script:
-  - hiptest-publisher -c python-unittest.conf --push=TestCoffeeMachineHiptestPublisherSample.tap --test-run-id=1357
+  - hiptest-publisher -c python-unittest.conf --push="*.tap" --test-run-id=1357
