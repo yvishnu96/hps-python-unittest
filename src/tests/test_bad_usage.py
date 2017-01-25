@@ -2,7 +2,7 @@
 import unittest
 from actionwords import Actionwords
 
-class TestWeirdSpecs(unittest.TestCase):
+class TestBadUsage(unittest.TestCase):
     def setUp(self):
         self.actionwords = Actionwords(self)
 

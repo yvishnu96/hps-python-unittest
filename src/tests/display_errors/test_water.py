@@ -5,9 +5,6 @@ from actionwords import Actionwords
 class TestWater(unittest.TestCase):
     def setUp(self):
         self.actionwords = Actionwords(self)
-        # As a coffee lover
-        # I have to handle the water tank
-        # So I can have coffee when I need it
         # Given the coffee machine is started
         self.actionwords.the_coffee_machine_is_started()
         # And I handle everything except the water tank

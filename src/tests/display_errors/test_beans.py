@@ -5,9 +5,6 @@ from actionwords import Actionwords
 class TestBeans(unittest.TestCase):
     def setUp(self):
         self.actionwords = Actionwords(self)
-        # As a coffee lover
-        # I have to put fresh beans from time to time
-        # So I can have coffee when I need it
         # Given the coffee machine is started
         self.actionwords.the_coffee_machine_is_started()
         # And I handle everything except the beans

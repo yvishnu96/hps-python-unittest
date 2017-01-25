@@ -5,9 +5,6 @@ from actionwords import Actionwords
 class TestGrounds(unittest.TestCase):
     def setUp(self):
         self.actionwords = Actionwords(self)
-        # As a coffee lover
-        # I have to empty the grounds
-        # So I don't end up with a total mess around the coffee machine
         # Given the coffee machine is started
         self.actionwords.the_coffee_machine_is_started()
         # And I handle everything except the grounds

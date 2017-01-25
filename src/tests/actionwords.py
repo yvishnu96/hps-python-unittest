@@ -7,7 +7,7 @@ class Actionwords:
         self.test = test
         self.handled = []
 
-    def i_start_the_coffee_machine(self, lang = "en"):
+    def i_start_the_coffee_machine_using_language_lang(self, lang = "en"):
         self.sut.start(lang)
 
     def i_shutdown_the_coffee_machine(self):
@@ -49,7 +49,7 @@ class Actionwords:
                 self.i_empty_the_coffee_grounds()
 
     def the_coffee_machine_is_started(self):
-        self.i_start_the_coffee_machine()
+        self.i_start_the_coffee_machine_using_language_lang()
 
     def i_handle_everything_except_the_water_tank(self):
         self.i_handle_coffee_grounds()
@@ -71,3 +71,18 @@ class Actionwords:
     def i_handle_everything_except_the_grounds(self):
         self.i_handle_water_tank()
         self.i_handle_beans()
+
+    def displayed_message_is(self, free_text = ""):
+        self.message_message_should_be_displayed(message = free_text)
+
+    def i_switch_to_settings_mode(self):
+        self.sut.show_settings()
+
+    def settings_should_be(self, datatable = "||"):
+        expected_settings = [[cell.strip() for cell in line.split('|')] for line in datatable.split("\n")]
+        settings = [['', k, str(self.sut.get_settings()[k]), ''] for k in self.sut.get_settings().keys()]
+
+        print expected_settings
+        print settings
+
+        self.test.assertEqual(expected_settings, settings)
