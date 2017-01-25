@@ -82,7 +82,4 @@ class Actionwords:
         expected_settings = [[cell.strip() for cell in line.split('|')] for line in datatable.split("\n")]
         settings = [['', k, str(self.sut.get_settings()[k]), ''] for k in self.sut.get_settings().keys()]
 
-        print expected_settings
-        print settings
-
         self.test.assertEqual(expected_settings, settings)
