@@ -6,7 +6,7 @@ class TestSupportInternationalisation(unittest.TestCase):
     def setUp(self):
         self.actionwords = Actionwords(self)
 
-    def test_No_messages_are_displayed_when_machine_is_shut_down(self):
+    def test_no_messages_are_displayed_when_machine_is_shut_down(self):
         # Given the coffee machine is started
         self.actionwords.the_coffee_machine_is_started()
         # When I shutdown the coffee machine
