@@ -7,6 +7,7 @@ class TestSupportInternationalisation(unittest.TestCase):
         self.actionwords = Actionwords(self)
 
     def test_no_messages_are_displayed_when_machine_is_shut_down(self):
+        # Tags: priority:1
         # Given the coffee machine is started
         self.actionwords.the_coffee_machine_is_started()
         # When I shutdown the coffee machine
@@ -16,6 +17,7 @@ class TestSupportInternationalisation(unittest.TestCase):
 
     def messages_are_based_on_language(self, language, ready_message):
         # Well, sometimes, you just get a coffee.
+        # Tags: priority:1
         # When I start the coffee machine using language "<language>"
         self.actionwords.i_start_the_coffee_machine_using_language_lang(lang = language)
         # Then message "<ready_message>" should be displayed

@@ -11,12 +11,14 @@ class TestGrounds(unittest.TestCase):
         self.actionwords.i_handle_everything_except_the_grounds()
 
     def test_message_empty_grounds_is_displayed_after_30_coffees_are_taken(self):
+        # Tags: priority:0
         # When I take "30" coffees
         self.actionwords.i_take_coffee_number_coffees(coffee_number = 30)
         # Then message "Empty grounds" should be displayed
         self.actionwords.message_message_should_be_displayed(message = "Empty grounds")
 
     def test_when_the_grounds_are_emptied_message_is_removed(self):
+        # Tags: priority:1
         # Given I take "30" coffees
         self.actionwords.i_take_coffee_number_coffees(coffee_number = 30)
         # When I empty the coffee grounds
